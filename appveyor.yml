@@ -14,6 +14,6 @@ deploy:
   server: https://e336c9be.ngrok.io
   api_key:
     secure: 8PgmblIvYgrc7jr4ZxOdZ9ADT+PeBCF6+PqRcf6PZ4A=
-  project: AppVeyorX
+  project: AppVeyor
   environment: Development
   deploy_wait: true
