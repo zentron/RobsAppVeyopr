@@ -1,0 +1,19 @@
+version: 1.0.{build}
+install:
+- ps: choco install octopustools
+before_build:
+- cmd: nuget restore
+build:
+  publish_wap_octopus: true
+  verbosity: minimal
+deploy:
+- provider: Octopus
+  push_packages: true
+  create_release: true
+  deploy_release: true
+  server: https://e336c9be.ngrok.io
+  api_key:
+    secure: 8PgmblIvYgrc7jr4ZxOdZ9ADT+PeBCF6+PqRcf6PZ4A=
+  project: AppVeyorX
+  environment: Development
+  deploy_wait: true
